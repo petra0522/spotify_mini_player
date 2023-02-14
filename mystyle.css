@@ -1,5 +1,26 @@
-h1{color: green;font-family: 'Times New Roman', Times, serif;font-size: 250%;}
-div.fixed {position: fixed;width: 50%;bottom: 10px;}
-a{color: black;font-family: 'Times New Roman', Times, serif;font-size: 100%;position: fixed;}
-p1{color: rgb(4, 97, 9);font-family: 'Times New Roman', Times, serif;font-size: 100%;}
-button{color: black;background-color: green;position: fixed;left: 50%;}
+h1 {
+  color: green;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 250%;
+}
+div.fixed {
+  position: fixed;
+  width: 50%;
+  bottom: 10px;
+}
+a {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 100%;
+}
+p1 {
+  color: rgb(4, 97, 9);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 100%;
+}
+button {
+  color: black;
+  background-color: green;
+  position: fixed;
+  left: 50%;
+}

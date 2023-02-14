@@ -7,29 +7,61 @@
   </head>
 
   <body>
-    <h1 style="color: green;font-family: 'Times New Roman', Times, serif;font-size: 250%;">Spotify Mini Player</h1>
-    <div class="fixed" style="position: fixed;width: 50%;bottom: 10px;"><strong>Impressum:</strong>
-      <br>Schulerpraktikanten: Antonia ; Aurela<br>
-     Ansprechspartner: Peng Siyuan<br>
-     Firma: adesso SE</div>
-     <p> </p> <a href="https://open.spotify.com/" style="color: black;font-family: 'Times New Roman', Times, serif;font-size: 100%;">spotify</a> <p>
-      <p> <a href="https://www.youtube.com/watch?v=2Q_ZzBGPdqE"> Link </a> </p> 
-     <script> 
+    <h1
+      style="
+        color: green;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 250%;
+      "
+    >
+      Spotify Mini Player
+    </h1>
+    <div class="fixed" style="position: fixed; width: 50%; bottom: 10px">
+      <strong>Impressum:</strong> <br />Schulerpraktikanten: Antonia ; Aurela<br />
+      Ansprechspartner: Peng Siyuan<br />
+      Firma: adesso SE
+    </div>
+    <p></p>
+    <a
+      href="https://open.spotify.com/"
+      style="
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 100%;
+      "
+      >Open Spotify</a
+    >
+    <p></p>
+    <p><a href="https://www.youtube.com/watch?v=2Q_ZzBGPdqE"> Link </a></p>
+    <button
+      id="play/pause-button"
+      onclick="getinnerHTML()"
+      style="color: black; background-color: green; position: fixed; left: 50%"
+    >
+      ▶️
+    </button>
+    <p>Vor-/zurück Buttons</p>
+    <div class="btn-group" style="width: 100%">
+      <button style="width: 45px">⏭️ vor</button>
+      <button style="width: 45px">⏭️ zurück</button>
+    </div>
+    <script>
       function getinnerHTML() {
-       document.getElementById("play/pause-button").innerHTML = "⏸️"; 
-     }
-      </script>
-      <script>var x = "play"
-       function getinnerHTML() {
-       if(x=== "play") {
-           document
-           x= "pause"
-           document.getElementById("play/pause-button").innerHTML = "▶️"
-       }else{
-           x="play"
-           document.getElementById("play/pause-button").innerHTML = "⏸️"
-       }
-       }</script>
-       </body>
-     </html>
-
+        document.getElementById("play/pause-button").innerHTML = "⏸️";
+      }
+    </script>
+    <script>
+      var x = "play";
+      function getinnerHTML() {
+        if (x === "play") {
+          document;
+          x = "pause";
+          document.getElementById("play/pause-button").innerHTML = "▶️";
+        } else {
+          x = "play";
+          document.getElementById("play/pause-button").innerHTML = "⏸️";
+        }
+      }
+    </script>
+  </body>
+</html>
