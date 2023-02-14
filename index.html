@@ -12,14 +12,26 @@
       <br>Schulerpraktikanten: Antonia ; Aurela<br>
      Ansprechspartner: Peng Siyuan<br>
      Firma: adesso SE</div>
-     <p1><a href="https://open.spotify.com/" target="_blank" 
-     style="color: black;font-family: 'Times New Roman', Times, serif;font-size: 100%;">Open Spotify</a></p1>
-     <p2><a href="https://www.youtube.com/watch?v=2Q_ZzBGPdqE" target="_blank"> Link </a></p2>
-     <button id="play/pause-button" onclick="innerConsole()">▶️</button>
- <script>
- function innerConsole(PlayPause) {
-  document.getElementById("play/pause-button").innerHTML ="⏸️";
- }
+     <a href="https://open.spotify.com/" target="_blank" 
+     style="color: rgb(4, 97, 9);font-family: 'Times New Roman', Times, serif;font-size: 100%;">Open Spotify</a>
+     <br>
+     <a href="https://www.youtube.com/watch?v=2Q_ZzBGPdqE" target="_blank"> Link </a>
+     <button id="play/pause-button" onclick="getinnerHTML()" style="color: black;background-color: green;position: fixed;left: 50%;">▶️</button>
+ <script> 
+ function getinnerHTML() {
+  document.getElementById("play/pause-button").innerHTML = "⏸️"; 
+}
  </script>
+ <script>var x = "play"
+  function getinnerHTML() {
+  if(x=== "play") {
+      document
+      x= "pause"
+      document.getElementById("play/pause-button").innerHTML = "▶️"
+  }else{
+      x="play"
+      document.getElementById("play/pause-button").innerHTML = "⏸️"
+  }
+  }</script>
   </body>
 </html>
