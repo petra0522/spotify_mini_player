@@ -38,61 +38,68 @@
       >Open Spotify</a
     >
     <p></p>
-    <p><a href="https://www.youtube.com/watch?v=2Q_ZzBGPdqE"
-        style="color: black;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 100%;
-        position: fixed;
-        bottom: 25px;
-        left: 90%;
-      "
-      > Link </a></p>
-    <button
-      id="play/pause-button"
-      onclick="statusChange()"
-      style="color: black; background-color: black; position: fixed; left: 50%;bottom: 30%;"
-    >
-      ▶️
-    </button>
-  <div class="btn-group" onclick="log()" 
-       style="width: 100%;
-       position: fixed;
-       left: 45%;
-       bottom: 30%;">
-    <button  style="width: 45px;
-             margin-right: 50px;
-             ">⏭️ vor</button>
-     <button style="width: 45px;
-            margin-left: 55px;
-            ">⏭️ zurück</button>
-  </div> 
-  <form action="https://open.spotify.com/" 
-        style="position: fixed;
-        left: 80%;
-        bottom: 78%;
-        ">
-    <label for="search">Search:</label>
-    <input type="text" id="stoken" name=""
-          style="width: 250px;
-          ">
-  </form>  
-  <img src="https://api.time.com/wp-content/uploads/2015/07/help.jpeg"
-        alt="Beatles Help Album Cover" 
-        style="width: 200px;
-        height: 250px;
-        position: fixed;
-        left: 45%;
-        top:30%;
-        ">
-  <img src="https://mms.businesswire.com/media/20200722005698/de/807306/5/Spotify_Logo_RGB_Green%5B2%5D.jpg"
-       alt="Spotify Logo" 
-       style="width:222px;
-      height:70px; position: 
-      fixed; left: 81%; 
-      bottom: 85%"> 
+    <p>
+      <a
+        href="https://www.youtube.com/watch?v=2Q_ZzBGPdqE"
+        style="
+          color: black;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 100%;
+          position: fixed;
+          bottom: 25px;
+          left: 90%;
+        "
+      >
+        Link
+      </a>
+    </p>
 
+    <div
+      class="btn-group"
+      style="width: 100%; position: fixed; left: 45%; bottom: 30%"
+    >
+      <button onclick="log()" style="width: 45px; margin-right: 50px">
+        ⏭️ vor
+      </button>
+      <button
+        id="play/pause-button"
+        onclick="statusChange()"
+        style="
+          color: black;
+          background-color: black;
+          position: fixed;
+          left: 50%;
+          bottom: 30%;
+        "
+      >
+        ▶️
+      </button>
+      <button onclick="log()" style="width: 45px; margin-left: 55px">
+        ⏭️ zurück
+      </button>
+    </div>
+    <form
+      action="https://open.spotify.com/"
+      style="position: fixed; left: 80%; bottom: 78%"
+    >
+      <label for="search">Search:</label>
+      <input type="text" id="stoken" name="" style="width: 250px" />
+    </form>
+    <img
+      src="https://api.time.com/wp-content/uploads/2015/07/help.jpeg"
+      alt="Beatles Help Album Cover"
+      style="width: 200px; height: 250px; position: fixed; left: 45%; top: 30%"
+    />
+    <img
+      src="https://mms.businesswire.com/media/20200722005698/de/807306/5/Spotify_Logo_RGB_Green%5B2%5D.jpg"
+      alt="Spotify Logo"
+      style="
+        width: 222px;
+        height: 70px;
+        position: fixed;
+        left: 81%;
+        bottom: 85%;
+      "
+    />
   </body>
 </html>
-
-
-
