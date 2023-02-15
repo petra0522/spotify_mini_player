@@ -3,7 +3,7 @@ function myFunction() {
 }
 var status = "play";
 function statusChange() {
-  if ( status === "play") {
+  if (status === "play") {
     document.getElementById("play/pause-button").innerHTML = "⏸️";
     status = "pause";
     document.getElementById("play/pause-button").innerHTML = "▶️";
@@ -15,3 +15,7 @@ function statusChange() {
 function log() {
     console.log('Klick');
 }
+//Set Item
+localStorage.setItem("search Token");
+//Retrieve
+document.getElementById("stoken").innerHTML = localStorage.getItem("search Token");
