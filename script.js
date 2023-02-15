@@ -1,14 +1,14 @@
 function myFunction() {
   document.getElemntById("play/pause-button").innerHTML = "⏸️";
 }
-var x = "play";
-function getinnerHTML() {
-  if (x === "play") {
-    document;
-    x = "pause";
+var status = "play";
+function statusChange() {
+  if ( status === "play") {
+    document.getElementById("play/pause-button").innerHTML = "⏸️";
+    status = "pause";
     document.getElementById("play/pause-button").innerHTML = "▶️";
   } else {
-    x = "play";
+    status = "play";
     document.getElementById("play/pause-button").innerHTML = "⏸️";
   }
 }
