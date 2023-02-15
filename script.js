@@ -16,8 +16,6 @@ function statusChange() {
 function log() {
   console.log("Klick");
 }
-//Set Item
-localStorage.setItem("search Token");
-//Retrieve
-document.getElementById("stoken").innerHTML =
-  localStorage.getItem("search Token");
+function accessToken() {
+     localStorage.setItem("token", document.getElementById("token").value );
+}

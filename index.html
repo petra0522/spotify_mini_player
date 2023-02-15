@@ -26,7 +26,8 @@
     </div>
     <p></p>
     <a
-      href="https://open.spotify.com/"
+      href="https://open.spotify.com/" 
+      target="_blank"
       style="
         color: black;
         font-family: 'Times New Roman', Times, serif;
@@ -79,11 +80,11 @@
       </button>
     </div>
     <form
-      action="https://open.spotify.com/"
-      style="position: fixed; left: 80%; bottom: 78%"
+       style="position: fixed; left: 80%; bottom: 78%"
     >
       <label for="search">Search:</label>
-      <input type="text" id="stoken" name="" style="width: 250px" />
+      <input type="text" id="token" name="" style="width: 250px" />
+      <button onclick="accessToken()" type="button">enter</button>
     </form>
     <img
       src="https://api.time.com/wp-content/uploads/2015/07/help.jpeg"
