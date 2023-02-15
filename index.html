@@ -50,14 +50,21 @@
     <button
       id="play/pause-button"
       onclick="statusChange()"
-      style="color: black; background-color: green; position: fixed; left: 50%;bottom: 30%;"
+      style="color: black; background-color: black; position: fixed; left: 50%;bottom: 30%;"
     >
       ▶️
     </button>
   <div class="btn-group" onclick="log()" 
-       style="width: 100%">
-    <button  style="width: 45px;">⏭️ vor</button>
-    <button style="width: 45px;">⏭️ zurück</button>
+       style="width: 100%;
+       position: fixed;
+       left: 45%;
+       bottom: 30%;">
+    <button  style="width: 45px;
+             margin-right: 50px;
+             ">⏭️ vor</button>
+    <button style="width: 45px;
+            margin-left: 55px;
+            ">⏭️ zurück</button>
   </div> 
   <form action="https://open.spotify.com/" 
         style="position: fixed;
