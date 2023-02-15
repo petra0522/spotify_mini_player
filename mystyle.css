@@ -18,9 +18,3 @@ p1 {
   font-family: "Times New Roman", Times, serif;
   font-size: 100%;
 }
-button {
-  color: black;
-  background-color: green;
-  position: fixed;
-  left: 50%;
-}

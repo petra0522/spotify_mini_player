@@ -1,5 +1,5 @@
 function myFunction() {
-  document.getElementById("play/pause-button").innerHTML = "⏸️";
+  document.getElemntById("play/pause-button").innerHTML = "⏸️";
 }
 var x = "play";
 function getinnerHTML() {
@@ -12,3 +12,4 @@ function getinnerHTML() {
     document.getElementById("play/pause-button").innerHTML = "⏸️";
   }
 }
+
