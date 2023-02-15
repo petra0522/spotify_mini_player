@@ -28,11 +28,22 @@
         color: black;
         font-family: 'Times New Roman', Times, serif;
         font-size: 100%;
+        position: fixed;
+        bottom: 10px;
+        left: 90%;
       "
       >Open Spotify</a
     >
     <p></p>
-    <p><a href="https://www.youtube.com/watch?v=2Q_ZzBGPdqE"> Link </a></p>
+    <p><a href="https://www.youtube.com/watch?v=2Q_ZzBGPdqE"
+        style="color: black;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 100%;
+        position: fixed;
+        bottom: 25px;
+        left: 90%;
+      "
+      > Link </a></p>
     <button
       id="play/pause-button"
       onclick="statusChangeL()"
@@ -45,5 +56,9 @@
     <button  style="width: 45px;">⏭️ vor</button>
     <button style="width: 45px;">⏭️ zurück</button>
   </div> 
+  <form action="https://open.spotify.com/">
+    <label for="search">Search:</label>
+    <input type="text" id="stoken" name="">
+  </form>  
   </body>
 </html>
