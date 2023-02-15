@@ -12,4 +12,6 @@ function statusChange() {
     document.getElementById("play/pause-button").innerHTML = "⏸️";
   }
 }
-
+function log() {
+    console.log('Klick');
+}
