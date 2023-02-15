@@ -12,6 +12,9 @@
         color: green;
         font-family: 'Times New Roman', Times, serif;
         font-size: 250%;
+        position: fixed;
+        left: 40%;
+        top: 5%;
       "
     >
       Spotify Mini Player
@@ -46,32 +49,34 @@
       > Link </a></p>
     <button
       id="play/pause-button"
-      onclick="statusChangeL()"
+      onclick="statusChange()"
       style="color: black; background-color: green; position: fixed; left: 50%;bottom: 40%;"
     >
       ▶️
     </button>
-    <p>Vor-/zurück Buttons</p>
-  <div class="btn-group" onclick="log()" style="width: 100%">
+  <div class="btn-group" onclick="log()" 
+       style="width: 100%">
     <button  style="width: 45px;">⏭️ vor</button>
     <button style="width: 45px;">⏭️ zurück</button>
   </div> 
-  <form action="https://open.spotify.com/">
+  <form action="https://open.spotify.com/" 
+        style="position: fixed;
+        left: 85%;
+        bottom: 80%;
+        ">
     <label for="search">Search:</label>
-    <input type="text" id="stoken" name="">
+    <input type="text" id="stoken" name=""
+          style="width: 250px;
+          ">
   </form>  
-  </body>
-</html>
-
-<html>
-<body>
-
-<h2>Alternative text</h2>
-
-<p>The alt attribute should reflect the image content, so users who cannot see the image get an understanding of what the image contains:</p>
-
-<img src="Screenshot 2023-02-15 13.30.57.png
-" alt="Spotify Logo" width="460" height="345">
+  <img src="https://api.time.com/wp-content/uploads/2015/07/help.jpeg"
+        alt="Beatles Help Album Cover" 
+        style="width: 200px;
+        height: 250px;
+        position: fixed;
+        left: 45%;
+        top:30%;
+        ">
 
 </body>
 </html>
