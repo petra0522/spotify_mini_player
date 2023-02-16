@@ -3,42 +3,50 @@ function myFunction() {
 }
 var status = "play";
 function statusChange() {
+  loadImage();
   console.log("status changed");
   if (status === "play") {
-    request("https://api.spotify.com/v1/me/player/pause","PUT","")
+    request("https://api.spotify.com/v1/me/player/pause", "PUT", "");
     document.getElementById("play/pause-button").innerHTML = "⏸️";
     status = "pause";
     document.getElementById("play/pause-button").innerHTML = "▶️";
   } else {
     status = "play";
     var body = {
-      "context_uri": "spotify:album:5ht7ItJgpBH7W6vJ5BqpPr",
-      "offset": {
-        "position": 5
+      context_uri: "spotify:album:5ht7ItJgpBH7W6vJ5BqpPr",
+      offset: {
+        position: 5,
       },
-      "position_ms": 0
-    }
-    request("https://api.spotify.com/v1/me/player/play","PUT",body)
+      position_ms: 0,
+    };
+    request("https://api.spotify.com/v1/me/player/play", "PUT", body);
     document.getElementById("play/pause-button").innerHTML = "⏸️";
   }
 }
-function logprevious () {
-console.log("Klick");
-request("	https://api.spotify.com/v1/me/player/previous", "POST", "");
-}
-function lognext () {
+function logprevious() {
   console.log("Klick");
-  request ("https://api.spotify.com/v1/me/player/next", "POST", "");
-  }
+  request("	https://api.spotify.com/v1/me/player/previous", "POST", "");
+}
+function lognext() {
+  console.log("Klick");
+  request("https://api.spotify.com/v1/me/player/next", "POST", "");
+}
 function accessToken() {
   localStorage.setItem("token", document.getElementById("token").value);
 }
- function request(url,method,body) {
+
+function loadImage() {
+  request("https://api.spotify.com/v1/me/player", "GET").then((response) =>
+    console.log(response)
+  );
+}
+
+function request(url, method, body) {
   // TODO: read the token from localStorage und save in a variable named token
-  var token = localStorage.getItem("token")
+  var token = localStorage.getItem("token");
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
-  headers.append("Authorization", "Bearer " + Token);
+  headers.append("Authorization", "Bearer " + token);
   const data = {
     method: method,
     headers: headers,
@@ -47,10 +55,10 @@ function accessToken() {
   return fetch(url, data).then((response) => {
     if (response.status === 401) {
       alert("Token is expired! Please enter a new token.");
+    } else if (response.status === 204) {
+      return "";
+    } else {
+      return response.json();
     }
-    return response.json();
   });
-}   
-
-
-
+}
