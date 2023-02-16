@@ -22,19 +22,23 @@ function statusChange() {
     document.getElementById("play/pause-button").innerHTML = "⏸️";
   }
 }
-function log() {
-  console.log("Klick");
+function logprevious () {
+console.log("Klick");
+request("	https://api.spotify.com/v1/me/player/previous", "POST", "");
 }
+function lognext () {
+  console.log("Klick");
+  request ("https://api.spotify.com/v1/me/player/next", "POST", "");
+  }
 function accessToken() {
   localStorage.setItem("token", document.getElementById("token").value);
 }
  function request(url,method,body) {
   // TODO: read the token from localStorage und save in a variable named token
-
- var token = localStorage.getItem("token")
+  var token = localStorage.getItem("token")
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
-  headers.append("Authorization", "Bearer " + token);
+  headers.append("Authorization", "Bearer " + Token);
   const data = {
     method: method,
     headers: headers,
@@ -46,4 +50,7 @@ function accessToken() {
     }
     return response.json();
   });
-}
+}   
+
+
+
