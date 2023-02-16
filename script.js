@@ -37,7 +37,9 @@ function accessToken() {
 
 function loadImage() {
   request("https://api.spotify.com/v1/me/player", "GET").then((response) =>
-    console.log(response)
+    console.log(response);
+    var image=response["item"]["album"]["images"][0]["url"]
+    console.log(image)
   );
 }
 
