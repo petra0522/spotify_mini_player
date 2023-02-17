@@ -4,6 +4,7 @@ function myFunction() {
 var status = "play";
 function statusChange() {
   console.log("status changed");
+  loadImage();
   if (status === "play") {
     request("https://api.spotify.com/v1/me/player/pause", "PUT", "");
     document.getElementById("play/pause-button").innerHTML = "⏸️";
@@ -33,6 +34,8 @@ function loadImage() {
     var image = response["item"]["album"]["images"][0]["url"];
     console.log(image);
     document.getElementById("songImage").src= image;
+   var Titel = response["item"]["name"]
+    document.getElementById("titel").innerHTML = Titel;
   });
 }
 
