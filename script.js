@@ -3,7 +3,6 @@ function myFunction() {
 }
 var status = "play";
 function statusChange() {
-  loadImage();
   console.log("status changed");
   if (status === "play") {
     request("https://api.spotify.com/v1/me/player/pause", "PUT", "");
@@ -12,24 +11,17 @@ function statusChange() {
     document.getElementById("play/pause-button").innerHTML = "▶️";
   } else {
     status = "play";
-    var body = {
-      context_uri: "spotify:album:5ht7ItJgpBH7W6vJ5BqpPr",
-      offset: {
-        position: 5,
-      },
-      position_ms: 0,
-    };
-    request("https://api.spotify.com/v1/me/player/play", "PUT", body);
+    request("https://api.spotify.com/v1/me/player/play", "PUT");
     document.getElementById("play/pause-button").innerHTML = "⏸️";
   }
 }
 function logprevious() {
   console.log("Klick");
-  request("	https://api.spotify.com/v1/me/player/previous", "POST", "");
+  request("	https://api.spotify.com/v1/me/player/previous", "POST", "").then(() =>  loadImage() );
 }
 function lognext() {
   console.log("Klick");
-  request("https://api.spotify.com/v1/me/player/next", "POST", "");
+  request("https://api.spotify.com/v1/me/player/next", "POST", "").then(() =>  loadImage());
 }
 function accessToken() {
   localStorage.setItem("token", document.getElementById("token").value);
@@ -40,6 +32,7 @@ function loadImage() {
     console.log(response);
     var image = response["item"]["album"]["images"][0]["url"];
     console.log(image);
+    document.getElementById("songImage").src= image;
   });
 }
 
