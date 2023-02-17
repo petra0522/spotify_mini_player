@@ -1,5 +1,6 @@
 h1 {
-  color: green;
+  color: black;
+  background-color: aliceblue;
   font-family: "Times New Roman", Times, serif;
   font-size: 250%;
 }
@@ -12,4 +13,7 @@ a {
   color: black;
   font-family: "Times New Roman", Times, serif;
   font-size: 100%;
+}
+body{
+  background-color: rgb(77, 77, 77) ;
 }
